@@ -1,0 +1,48 @@
+/* Django Admin specific styling */
+
+#header {
+  height: 50px;
+  background: $admin-color-0;
+  color: #fff; }
+
+#branding h1 {
+  color: #fff; }
+
+#content h1 {
+  font-size: 28px;
+}
+
+a:link, a:visited {
+  color: $admin-color-0; }
+
+div.breadcrumbs {
+  background: $secondary-color-01;
+  color: $secondary-color-2; }
+
+div.breadcrumbs a {
+  color: $secondary-color-2; }
+
+div.breadcrumbs a:hover {
+  color: $admin-color-0; }
+
+.module h2, .module caption, .inline-group h2 {
+  background: $secondary-color-0; }
+
+.button, input[type="submit"], input[type="button"], .submit-row input, a.button {
+  background: $admin-color-0;
+  color: #fff; }
+
+  .button.default, input[type="submit"].default, .submit-row input.default {
+  background-color: $secondary-color-1;
+}
+
+.scsi-brand {
+  font-family: $font-brand;
+  font-weight: 700;
+  font-size: 36px;
+  color: #fff;
+
+  span {
+    color: $secondary-color-0;
+  }
+}

@@ -1,0 +1,104 @@
+/* Contact Section */
+
+
+.contact-area {
+  background: $background-alt;
+  height: auto;
+  width: 100%;
+}
+
+.contact-content {
+  padding: 100px;
+  background: #000 none repeat scroll 0 0;
+}
+
+.contact-content-right {
+  padding: 100px;
+}
+
+#contact-space {
+  margin-top: 6rem;
+
+  @include mq('phablet') {
+    margin-top: 8rem;
+  }
+  
+}
+
+.contact-form input[type="text"], .contact-form input[type="email"] {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  color: #444;
+  height: 40px;
+  margin-bottom: 16px;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.contact-form textarea  {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  color: #444;
+  height: 140px;
+  padding: 20px;
+  width: 100%;
+}
+
+.contact-form button[type="submit"],
+.contact-form a {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #ccc;
+  color: #444;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 8px;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+  border-radius: 30px;
+
+  @include mq('tablet') {
+    font-size: 24px;
+  }
+}
+
+.contact-form button[type=submit]:hover,
+.contact-form a:hover {
+  color: #fff;
+  border: 1px solid $secondary-color-0 ;
+  background: $secondary-color-0 ;
+}
+
+#contact .form .validation {
+  color: red;
+  display: none;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.single-icon i {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #444;
+  line-height: 46px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.single-icon p {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.contact-icon {
+  margin-bottom: 40px;
+}
+
+#google-map {
+  height: 370px;
+  margin-bottom: 20px;
+}

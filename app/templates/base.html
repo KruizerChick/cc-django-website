@@ -1,0 +1,67 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>{% block title %}{% endblock title %}My Website</title>
+
+  {% block meta-keywords %}
+    <meta name="meta-keywords" content="">
+  {% endblock meta-keywords %}
+
+  {% block meta-description %}
+    <meta name="description" content="">
+  {% endblock meta-description %}
+
+  {% block css %}
+    <!-- CSS Libraries -->
+    <!-- Semantic-UI CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+    <!-- Project-specific CSS file -->
+    <link href="{% static 'css/project.min.css' %}" rel="stylesheet">
+    {% block extra-css %}{% endblock extra-css %}
+  {% endblock css %}
+
+</head>
+<body>
+  
+  <header>
+    {% block nav-menu %}
+      {% include 'partials/_navbar.html' %}
+    {% endblock nav-menu %}
+  </header>
+
+  <div class="ui container">
+    <div class="ui container">
+      {% include 'partials/_alerts.html' %}
+    </div>
+    
+    <div class="ui container">
+      {% block content %}
+        <!-- Page Content -->
+        {% block page-content %}{% endblock page-content %}
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+      {% endblock content %}
+    </div>
+  </div>
+
+  {% block modal %}{% endblock modal %}
+
+  {% block javascript %}
+    <!-- JavaScript Libraries -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+
+    <!-- Project specific JavaScript -->
+    <script src="{% static 'js/project.min.js' %}"></script>
+    {% block extra-js %}{% endblock extra-js %}
+  {% endblock javascript %}
+
+</body>
+</html>

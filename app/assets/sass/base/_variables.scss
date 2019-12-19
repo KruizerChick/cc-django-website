@@ -1,0 +1,83 @@
+/* ===============================================
+      Variables
+   =============================================== */
+
+// Fonts
+$font-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-mono   : SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-code   : courier new, Courier, monospace;
+$font-brand  : 'Raleway', sans-serif;
+
+// Default Color Palettes
+// Slate Blue
+$primary-color-04: #fbfdfe;
+$primary-color-03: #ebf5fb;
+$primary-color-02: #7d9cb6;
+$primary-color-01: #4F7696;
+$primary-color-0 : #315b7d;     // Main Primary Color
+$primary-color-1 : #1D4769;
+$primary-color-2 : #223F57;
+
+// Accent Color (https://www.color-hex.com/color/3ec1d5)
+$secondary-color-02: #d8f2f6;
+$secondary-color-01: #8bd9ef;
+$secondary-color-0 : #3ec1d5;     // Main Secondary Color
+$secondary-color-1 : #319aaa;
+$secondary-color-2 : #25737f;
+
+// Django Admin specific:
+$admin-color-03: #e8e8e8;
+$admin-color-02: #a6a6a6;
+$admin-color-01: #646464;
+$admin-color-0: #333;
+
+
+// Background and Text Colors
+$text-default: #212529;
+$text-light: $primary-color-04;
+$background-default: #e2e2e2;
+$background-alt    : #f9f9f9;
+$background-footer : #252525;
+$border: #dcd9d9;
+
+// Bootstrap Colors
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+// Color for input box placeholders
+$grey: grey;
+
+// Default Button Colors
+$btn-default       : $secondary-color-01;
+$btn-default-hover : $secondary-color-02;
+$btn-default-active: $secondary-color-0;
+
+$btn-light       : #e0e1e2;
+$btn-light-hover : #cacbcd;
+$btn-light-active: #babbbc;
+
+// Alert colors
+$alert-green: #28a745;
+$mint-green: #d6e9c6;
+$alert-pink: #f2dede;
+$dark-pink: #eed3d7;
+$alert-red: #b94a48;
+
+// Django alert colors
+$alert-success-bg    : #d4edda;
+$alert-success-border: #c3e6cb;
+$alert-warning-bg    : #fff9e7;
+$alert-warning-border: #ffe79a;
+$alert-error-bg      : #f8d7da;
+$alert-error-border  : #f5c6cb;
+$alert-info-bg       : #d1ecf1;
+$alert-info-border   : #bee5eb;

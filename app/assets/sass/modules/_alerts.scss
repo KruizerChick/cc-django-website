@@ -1,0 +1,43 @@
+/* Django Alert styles */
+
+// bootstrap alert CSS, translated to the django-standard levels of
+// debug, info, success, warning, error
+
+.alert {
+  padding: .75rem 1rem;
+  margin: 0;
+  border-radius: 10px;
+  transform: translateY(70px);
+  z-index: 1000;
+
+  &:empty {
+    visibility: none;
+  }
+
+  &-success {
+    background-color: $alert-success-bg;
+    border-color:     $alert-success-border;
+  }
+
+  &-warning {
+    background-color: $alert-warning-bg;
+    border-color:     $alert-warning-border;
+  }
+
+  &-error, &-danger {
+    background-color: $alert-error-bg;
+    border-color:     $alert-error-border;
+    color: $alert-red;
+  }
+
+  &-info {
+    background-color: $alert-info-bg;
+    border-color:     $alert-info-border;
+  }
+
+  &-debug {
+    background-color: $white;
+    border-color: $mint-green;
+    color: $black;
+  }
+}

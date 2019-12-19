@@ -1,0 +1,28 @@
+/* ===========================
+    Project Styling (Sass)
+   =========================== */
+
+// Bootstrap Module(s)
+// @import "bootstrap4/bootstrap.scss";
+
+
+// Base settings
+@import "base/_variables";
+@import "base/_browser-basics";
+@import "base/_mixins";
+// @import "base/_theme";
+
+
+// Modules
+@import "modules/_navmenu";
+@import "modules/_alerts";
+// @import "modules/_blog";
+// @import "modules/_tags";
+// @import "modules/_contact";
+// @import "modules/_footer";
+
+
+// Base settings reserved for end of file
+@import "base/_helpers";
+@import "base/_print-styles";
+
