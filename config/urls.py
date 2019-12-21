@@ -16,6 +16,9 @@ urlpatterns = [
     # Third-party apps
     path('accounts/', include('allauth.urls')),
 
+    # Local apps
+    path('users/', include('app.users.urls', namespace='users')),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

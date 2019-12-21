@@ -74,6 +74,7 @@ THIRD_PARTY_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'rest_framework',
 
 ]
 
@@ -156,10 +157,19 @@ AUTHENTICATION_BACKENDS += [
 ACCOUNT_EMAIL_REQUIRED=True
 # User is blocked from signing in until email is confirmed. 
 # ("optional" or "none" allows activity without confirmation)
-ACCOUNT_EMAIL_VERIFICATION="mandatory"
+ACCOUNT_EMAIL_VERIFICATION="optional"
 ACCOUNT_PRESERVE_USERNAME_CASING=False
 # Don't ask "Remember me?" on log in page.
 ACCOUNT_SESSION_REMEMBER=False
 # Authenticate by "username", "email" or either "username_email"
 ACCOUNT_AUTHENTICATION_METHOD="username_email"
 
+# Django REST Framework
+# -----------------------------------------------------------------------------
+# REST_FRAMEWORK = {
+#     # Use Django's standard `django.contrib.auth` permissions,
+#     # or allow read-only access for unauthenticated users.
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+#     ]
+# }
