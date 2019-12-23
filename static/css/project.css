@@ -16,17 +16,18 @@
 html, body {
   height: 100%; }
 
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4; }
-
 body {
-  background-color: #fbfdfe;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #f2f2f2;
   color: #212529; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; }
 
 pre {
   overflow: auto; }
@@ -35,6 +36,9 @@ code, pre {
   font-family: courier new, Courier, monospace;
   font-size: 1em; }
 
+img {
+  width: 100%; }
+
 .no-margin {
   margin: 0; }
 
@@ -42,15 +46,22 @@ code, pre {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+a {
+  text-decoration: none;
+  color: #3ec1d5; }
+
+ul {
+  list-style: none; }
+
 /*
-    * Remove text-shadow in selection highlight:
-    * https://twitter.com/miketaylr/status/12228805301
-    *
-    * Vendor-prefixed and regular ::selection selectors cannot be combined:
-    * https://stackoverflow.com/a/16982510/7133471
-    *
-    * Customize the background color to match your design.
-    */
+  * Remove text-shadow in selection highlight:
+  * https://twitter.com/miketaylr/status/12228805301
+  *
+  * Vendor-prefixed and regular ::selection selectors cannot be combined:
+  * https://stackoverflow.com/a/16982510/7133471
+  *
+  * Customize the background color to match your design.
+  */
 ::-moz-selection {
   background: #fff;
   text-shadow: none; }
@@ -68,9 +79,9 @@ hr {
   padding: 0; }
 
 /* Remove the gap between audio, canvas, iframes,
-   * images, videos and the bottom of their containers:
-   * https://github.com/h5bp/html5-boilerplate/issues/440
-   */
+  * images, videos and the bottom of their containers:
+  * https://github.com/h5bp/html5-boilerplate/issues/440
+  */
 audio,
 canvas,
 iframe,
@@ -90,8 +101,8 @@ textarea {
   resize: vertical; }
 
 /* ==========================================================================
-      Browser Upgrade Prompt
-      ========================================================================== */
+    Browser Upgrade Prompt
+    ========================================================================== */
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -99,14 +110,143 @@ textarea {
   padding: 0.2em 0; }
 
 /* Mixins */
-/* Header and Top Menu */
-.custom-brand {
-  font-family: "Raleway", sans-serif;
-  font-weight: normal;
-  font-size: 36px;
+/* ==========================================================================
+   Themes
+   ========================================================================== */
+.x-large {
+  font-size: 64px;
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  margin-bottom: 1rem; }
+
+.large {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  margin-bottom: 1rem; }
+
+.lead {
+  font-size: 24px;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  margin-bottom: 1rem; }
+
+.bg-primary {
+  background-color: #3ec1d5;
+  color: #333; }
+
+.bg-light {
+  background-color: #f4f4f4;
+  color: #333;
+  border: #ccc 1px solid; }
+
+.bg-dark {
+  background-color: #343a40;
   color: #fff; }
-  .custom-brand span {
-    color: #3ec1d5; }
+
+.bg-success {
+  background-color: #28a745;
+  color: #fff; }
+
+.bg-danger {
+  background-color: #dc3545;
+  color: #333; }
+
+.bg-white {
+  background-color: #fff;
+  color: #333;
+  border: #ccc 1px solid; }
+
+.btn {
+  display: inline-block;
+  background: #f4f4f4;
+  color: #333;
+  padding: 6.4px 20.8px;
+  padding: 0.4rem 1.3rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-size: 1rem;
+  margin-right: 8px;
+  margin-right: 0.5rem;
+  outline: none;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; }
+  .btn.btn-primary {
+    background-color: #25737f;
+    color: #fff; }
+    .btn.btn-primary:hover {
+      background: #53c8da; }
+  .btn.btn-dark {
+    background-color: #343a40;
+    color: #fff; }
+    .btn.btn-dark:hover {
+      background: #3f474e; }
+  .btn.btn-success {
+    background-color: #28a745;
+    color: #fff; }
+    .btn.btn-success:hover {
+      background: #2dbc4e; }
+  .btn.btn-danger {
+    background-color: #dc3545;
+    color: #333; }
+    .btn.btn-danger:hover {
+      background: #e04b59; }
+  .btn:hover {
+    background: #626d78;
+    color: #fff; }
+
+.dark-overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+/* Header and Top Menu */
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 11.2px 32px;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  border-bottom: solid 1px #6c757d;
+  opacity: 0.9; }
+  .navbar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .navbar a {
+    color: #fff;
+    padding: 7.2px;
+    padding: 0.45rem;
+    margin: 0 3.84px;
+    margin: 0 0.24rem; }
+    .navbar a:hover {
+      color: #3ec1d5; }
+  .navbar .custom-brand {
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    font-size: 36px;
+    padding: 0;
+    background-color: #343a40;
+    color: #fff; }
+    .navbar .custom-brand span {
+      color: #3ec1d5; }
 
 /* Django Alert styles */
 .alert {
@@ -136,6 +276,31 @@ textarea {
     background-color: #fff;
     border-color: #d6e9c6;
     color: #000; }
+
+/* Landing page / section */
+.landing {
+  position: relative;
+  background: url("../images/kaleidico-3V8xo5Gbusk-unsplash.jpg") no-repeat center center/cover;
+  height: 100vh; }
+  .landing-inner {
+    color: #fff;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    margin: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center; }
 
 /* ==========================================================================
    Helper classes

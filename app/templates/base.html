@@ -18,9 +18,9 @@
 
   {% block css %}
     <!-- CSS Libraries -->
-    <!-- Semantic-UI CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <link rel="stylesheet" href="{% static 'css/project.min.css' %}">
+    <!-- Fonts -->
+    <script src="https://kit.fontawesome.com/ef46d99e63.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
 
     <!-- Project-specific CSS file -->
     <link href="{% static 'css/project.min.css' %}" rel="stylesheet">
@@ -30,33 +30,24 @@
 </head>
 <body>
   
-  <header>
-    {% block nav-menu %}
-      {% include 'partials/_navbar.html' %}
-    {% endblock nav-menu %}
-  </header>
+  {% block nav-menu %}
+    {% include 'partials/_navbar.html' %}
+  {% endblock nav-menu %}
 
-  <div class="ui container">
-    <div class="ui container">
-      {% include 'partials/_alerts.html' %}
-    </div>
-    
-    <div class="ui container">
-      {% block content %}
-        <!-- Page Content -->
-        {% block page-content %}{% endblock page-content %}
+  {% include 'partials/_alerts.html' %}
 
-        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-      {% endblock content %}
-    </div>
-  </div>
+  {% block content %}
+    <!-- Page Content -->
+    {% block page-content %}{% endblock page-content %}
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  {% endblock content %}
 
   {% block modal %}{% endblock modal %}
 
   {% block javascript %}
     <!-- JavaScript Libraries -->
     <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/all.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 
     <!-- Project specific JavaScript -->

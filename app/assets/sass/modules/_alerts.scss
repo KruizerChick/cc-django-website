@@ -27,7 +27,7 @@
   &-error, &-danger {
     background-color: $alert-error-bg;
     border-color:     $alert-error-border;
-    color: $alert-red;
+    color: $alert-error-text;
   }
 
   &-info {

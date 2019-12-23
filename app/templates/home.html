@@ -3,7 +3,19 @@
 
 {% block page-content %}
 
-  <h1>Home Page</h1>
-  <p>This is the home page.</p>
+<section class="landing">
+  <div class="dark-overlay">
+    <div class="landing-inner">
+      <h1 class="x-large">Home</h1>
+      <p class="lead">This is the home page.</p>
+      <p>Background image can be changed in the SASS 
+        <code>/app/assets/sass/modules/_landing.scss</code> file.</p>
+      <div class="buttons">
+        <a href="register.html" class="btn btn-primary">Sign Up</a>
+        <a href="login.html" class="btn">Login</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% endblock page-content %}

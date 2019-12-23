@@ -1,89 +1,40 @@
 /* Header and Top Menu */
 
-.custom-brand {
-    font-family: $font-brand;
-    font-weight: normal;
-    font-size: 36px;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  border-bottom: solid 1px $gray-600;
+  opacity: 0.9;
+
+  ul {
+    display: flex;
+  }
+
+  a {
     color: #fff;
-  
-    span {
-      color: $secondary-color-0;
+    padding: 0.45rem;
+    margin: 0 0.24rem;
+
+    &:hover {
+      color: $primary-color;
     }
   }
 
-// // Template Layout
-
-// .header-area {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: auto;
-//   background: rgba(0, 0, 0, 0.40);
-//   z-index: 9;
-// }
-
-// .navbar-header a.navbar-brand {
-//   display: inline-block;
-//   height: 70px;
-//   padding: 15px 0;
-// }
-
-// .main-menu ul.navbar-nav li {
-//   display: inline-block;
-//   padding: 0px 13px;
-// }
-
-// .main-menu ul.navbar-nav li a {
-//   font-size: 1rem;
-// }
-
-// .main-menu ul.navbar-nav li.nav-item a.nav-link:hover {
-//   color: $secondary-color-0;
-//   font-size: 150%;
-// }
-
-// a.dropdown-item, .dropdown-toggle {
-//   color: hsla(0,0%,100%,.5);
-//   font-size: 1rem;
-// }
-
-// a.dropdown-item:hover {
-//   background: rgba(0, 0, 0, 0.2);
-//   color: $secondary-color-0;
-//   font-size: 150%;
-// }
-
-// .main-menu .dropdown-menu  {
-//   background: rgba(0, 0, 0, 0.60);
-// }
-
-
-// // /* Stick Menu */
-
-// .stick .navbar-header a.navbar-brand {
-//   display: inline-block;
-//   height: 90px;
-// }
-
-// .stick .navbar-brand>img {
-//   display: none;
-// }
-
-// .stick .navbar-brand.sticky-logo>img {
-//   display: block;
-// }
-
-// .sticky-logo h1 {
-//   color: #fff;
-//   padding: 0;
-//   margin: 0;
-//   font-size: 36px;
-//   font-weight: bold;
-//   line-height: 1;
-// }
-
-// .sticky-logo h1 span {
-//   color: $secondary-color-0;
-// }
-
+  .custom-brand {
+    font-family: $font-brand;
+    font-weight: normal;
+    font-size: 36px;
+    padding: 0;
+    @include set-background($dark-color);
+  
+    span {
+      color: $primary-color-0;
+    }
+  }
+}

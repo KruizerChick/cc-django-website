@@ -1,7 +1,33 @@
 {% load static i18n %}
 
+<nav class="navbar bg-dark">
+  <a class="custom-brand" href="{% url 'home' %}" class="item"><span>e</span>Company</a>  
+  <ul>
+    <li><a href="{% url 'home' %}">{% trans 'Home' %}</a></li>
+    <li><a href="{% url 'home' %}#blog">{% trans 'Blog' %}</a></li>
+    <li><a href="{% url 'home' %}#contact">{% trans 'Contact' %}</a></li>
+  </ul>
+  <ul>
+    {% if request.user.is_authenticated %}
+      {% if request.user.is_staff %}
+      <li class="">
+        {% trans 'User Options' %} <i class="dropdown icon"></i>
+        <li><a href="{% url 'admin:index' %}" target="_blank">{% trans 'Admin' %}</a></li>
+        {% endif %}
+        <li><a href="{% url 'account_change_password' %}">{% trans 'Change Password' %}</a></li>
+        <li><a href="{% url 'account_logout' %}">{% trans 'Sign Out' %}</a></li>
+    {% else %}
+      <li><a href="{% url 'account_login' %}">{% trans 'Sign In' %}</a></li>
+      <li><a href="{% url 'account_signup' %}">{% trans 'Register' %}</a></li>
+    {% endif %}
+    </li>
+  </ul>
+
+</nav>
+
+
 <!-- header-area start -->
-<div class="ui top attached inverted menu">
+<!-- <div class="ui top attached inverted menu">
   <div class="ui inverted secondary menu">
     <div class="header item">
       <a class="custom-brand" href="{% url 'home' %}" class="item"><span>e</span>Company</a>  
@@ -9,9 +35,9 @@
     <a class="active item" href="{% url 'home' %}">{% trans 'Home' %}</a>
     <a class="item" href="{% url 'home' %}#blog">{% trans 'Blog' %}</a>
     <a class="item" href="{% url 'home' %}#contact">{% trans 'Contact' %}</a>
-  </div>
+  </div> -->
   <!-- User Options Menu -->
-  <div class="ui inverted secondary right menu">
+  <!-- <div class="ui inverted secondary right menu">
     {% if request.user.is_authenticated %}
       {% if request.user.is_staff %}
       <div class="ui simple dropdown item">
@@ -29,5 +55,5 @@
       {% endif %}
     </div>
   </div>
-</div>
+</div> -->
 <!-- header-area end -->

@@ -1,0 +1,21 @@
+/* Landing page / section */
+
+.landing {
+  position: relative;
+  // Change the background photo here:
+  // Photo by Kaleidico on Unsplash
+  background: url('../images/kaleidico-3V8xo5Gbusk-unsplash.jpg') no-repeat center center/cover;
+  height: 100vh;
+
+  &-inner {
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
