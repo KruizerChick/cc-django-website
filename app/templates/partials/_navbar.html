@@ -10,11 +10,12 @@
   <ul>
     {% if request.user.is_authenticated %}
       {% if request.user.is_staff %}
-      <li class="">
-        {% trans 'User Options' %} <i class="dropdown icon"></i>
-        <li><a href="{% url 'admin:index' %}" target="_blank">{% trans 'Admin' %}</a></li>
-        {% endif %}
-        <li><a href="{% url 'account_change_password' %}">{% trans 'Change Password' %}</a></li>
+      <li class="">{% trans 'User Options' %} <i class="dropdown icon"></i>
+        <ul>
+          <li><a href="{% url 'admin:index' %}" target="_blank">{% trans 'Admin' %}</a></li>
+          {% endif %}
+          <li><a href="{% url 'account_change_password' %}">{% trans 'Change Password' %}</a></li>
+        </ul>
         <li><a href="{% url 'account_logout' %}">{% trans 'Sign Out' %}</a></li>
     {% else %}
       <li><a href="{% url 'account_login' %}">{% trans 'Sign In' %}</a></li>

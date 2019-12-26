@@ -1,4 +1,4 @@
-/* Mixins */
+// Mixins
 
 // Media queries
 $breakpoints: (
@@ -23,7 +23,6 @@ $breakpoints: (
         }
     }
 }
-
 
 // Placeholders
 @mixin input-placeholder {
@@ -74,7 +73,7 @@ $breakpoints: (
 
 // Set text color based on background
 @function set-text-color($color) {
-    @if(lightness($color) > 50) {
+    @if(lightness($color) > 60) {
         @return #333;
     } @else {
         @return #fff;

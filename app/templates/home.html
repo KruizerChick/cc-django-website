@@ -8,14 +8,19 @@
     <div class="landing-inner">
       <h1 class="x-large">Home</h1>
       <p class="lead">This is the home page.</p>
+      <p>Edit the <code>home.html</code> template to modify.</p>
       <p>Background image can be changed in the SASS 
         <code>/app/assets/sass/modules/_landing.scss</code> file.</p>
-      <div class="buttons">
-        <a href="register.html" class="btn btn-primary">Sign Up</a>
-        <a href="login.html" class="btn">Login</a>
-      </div>
+      {% if not request.user.is_authenticated %}
+        <div class="buttons">
+          <a href="{% url 'account_signup' %}" class="btn btn-primary">Sign Up</a>
+          <a href="{% url 'account_login' %}" class="btn">Login</a>
+        </div>
+      {% endif %}
     </div>
   </div>
 </section>
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
 {% endblock page-content %}
