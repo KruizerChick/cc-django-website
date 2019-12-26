@@ -26,6 +26,29 @@
     }
   }
 
+  // Dropdown menus
+  ul ul {
+    display: none;
+    position: absolute;
+    padding: .25rem 0;
+  }
+
+  ul li:hover > ul {
+    display: inherit;
+    color: $primary-color;
+  }
+  
+  // First Tier Dropdown
+  ul ul li {
+    float: none;
+    padding: .5rem 0;
+    margin: 0;
+    background-color: darken($color: $dark-color, $amount: 5%);
+    display: list-item;
+    position: relative;
+  }
+
+
   .custom-brand {
     font-family: $font-brand;
     font-weight: normal;

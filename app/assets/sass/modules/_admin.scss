@@ -16,24 +16,24 @@ a:link, a:visited {
   color: $admin-color-0; }
 
 div.breadcrumbs {
-  background: $secondary-color-01;
-  color: $secondary-color-2; }
+  background: $primary-color-01;
+  color: $primary-color-2; }
 
 div.breadcrumbs a {
-  color: $secondary-color-2; }
+  color: $primary-color-2; }
 
 div.breadcrumbs a:hover {
   color: $admin-color-0; }
 
 .module h2, .module caption, .inline-group h2 {
-  background: $secondary-color-0; }
+  background: $primary-color-0; }
 
 .button, input[type="submit"], input[type="button"], .submit-row input, a.button {
   background: $admin-color-0;
   color: #fff; }
 
   .button.default, input[type="submit"].default, .submit-row input.default {
-  background-color: $secondary-color-1;
+  background-color: $primary-color-1;
 }
 
 .scsi-brand {
@@ -43,6 +43,6 @@ div.breadcrumbs a:hover {
   color: #fff;
 
   span {
-    color: $secondary-color-0;
+    color: $primary-color-0;
   }
 }

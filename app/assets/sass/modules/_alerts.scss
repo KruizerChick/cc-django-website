@@ -5,7 +5,9 @@
 
 .alert {
   padding: .75rem 1rem;
-  margin: 0;
+  margin: auto;
+  margin-top: 1.9rem;
+  max-width: $max-width/3*2;
   border-radius: 10px;
   transform: translateY(70px);
   z-index: 1000;
@@ -17,6 +19,7 @@
   &-success {
     background-color: $alert-success-bg;
     border-color:     $alert-success-border;
+    color: $alert-success-text;
   }
 
   &-warning {

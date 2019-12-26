@@ -12,7 +12,7 @@ Base application working
 Ref | Category | Description | Predecessor | Notes
 :---: | :--------: | ----------- | :-----------: | -----
 1 | Styling | Create templates and style files for User pages |
-2 | Styling | Create templates and style files for Blog pages |
+2 | Styling | Create templates and style files for Blog pages | 4
 3 | Functionality | Add REST API | | _Optional_
 4 | Functionality | Add Blog application |
 5 | Functionality | Add Categories model to Core app |
@@ -23,7 +23,7 @@ XX | Deployment | Create Cookiecutter to ease deployment | ...
 
 ## Wish List and Other
 
-- Use Brad Traversy's Social Network video for styling user pages: <https://www.youtube.com/watch?v=xoxJxifNWPE>
+- Next: Use Brad Traversy's Social Network video for styling user profile page: <https://www.youtube.com/watch?v=j9d7e9_fVu0>
   - Link to finished project from these videos: <https://github.com/bradtraversy/devconnector_2.0/tree/master/_resources/html_css_theme/css>
 
 
